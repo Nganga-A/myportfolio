@@ -8,15 +8,17 @@ const Home = () => {
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center h-full'>
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm a Full Stack Developer</h2>
-                <p className='text-gray-500 py'>My expertise encompasses a comprehensive understanding
+                <p className='text-gray-500 py-4 max-w-md'>My expertise encompasses a comprehensive understanding
 of software engineering principles and methodologies, which I adeptly apply to surmount complex
 problems.I thrive as a collaborative team-player, excelling in dynamic environments and derive genuine
 passion from tackling intricate technical challenges.</p>
 
                 <div>
-                    <button>
+                    <button className= 'group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
                         Portfolio
-                        <span> <HiMiniArrowRight /> </span>
+                        <span className='group-hover:rotate-90 duration-300'>
+                            <HiMiniArrowRight size={20} className='ml-1'/>
+                        </span>
                     </button>
                 </div>
             </div>
