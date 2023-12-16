@@ -7,6 +7,16 @@ import nextjs from "../assets/nextjs.png";
 import graphql from "../assets/graphql.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import bootstrap from "../assets/bootstrap.png";
+import django from "../assets/django.png";
+import flask from "../assets/flask.png";
+import jest from "../assets/jest.png";
+import jwt from "../assets/jwt.png";
+import nodejs from "../assets/nodejs.png";
+import postman from "../assets/postaman.png"
+import postgre from "../assets/postgre.png"
+import pytest from "../assets/pytest.png";
+import python from "../assets/python.png";
 
 
 const Experience = () => {
@@ -75,7 +85,7 @@ const Experience = () => {
         id: 11,
         src: flask,
         title: "Flask",
-        style: "shadow-green-500",
+        style: "shadow-gray-500",
       },
       {
         id: 12,
@@ -91,9 +101,9 @@ const Experience = () => {
       },
       {
         id: 14,
-        src: sqlPostgresql,
-        title: "SQL (PostgreSQL)",
-        style: "shadow-blue-700",
+        src: postgre,
+        title: "PostgreSQL",
+        style: "shadow-blue-500",
       },
       {
         id: 15,
@@ -103,15 +113,21 @@ const Experience = () => {
       },
       {
         id: 16,
-        src: pytestImage,
+        src: pytest,
         title: "Pytest",
         style: "shadow-red-600",
       },
       {
         id: 17,
-        src: jestImage,
+        src: jest,
         title: "Jest",
-        style: "shadow-green-800",
+        style: "shadow-pink-500",
+      },
+      {
+        id: 18,
+        src: jwt,
+        title: "JWT",
+        style: "shadow-purple-600",
       },
     
     ];
@@ -119,9 +135,9 @@ const Experience = () => {
   return (
     <div
     name="experience"
-    className="bg-gradient-to-b from-gray-800 to-black w-full h-screen" >
+    className="bg-gradient-to-b from-gray-800 to-black w-full min-h-screen" >
     <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-      <div>
+      <div className='pb-8'>
         <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
           Experience
         </p>
@@ -134,7 +150,7 @@ const Experience = () => {
             key={id}
             className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
           >
-            <img src={src} alt="" className="w-20 mx-auto" />
+            <img src={src} alt="" className="w-20 h-30 mx-auto" />
             <p className="mt-4">{title}</p>
             </div>
           ))}
