@@ -16,7 +16,7 @@ passion from tackling intricate technical challenges.
             </p>
             <br/>
             <p className='text-xl'>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident cum sit numquam impedit. Tenetur, omnis ducimus est nemo dolor similique fuga earum? Ipsa quasi quibusdam cumque odit ratione aut, fugiat porro voluptatibus recusandae, molestiae vitae consequuntur dolore! Delectus commodi consectetur quis repudiandae. Possimus ad sequi dolorem porro animi nobis! Architecto.
+            Beyond my technical prowess, I'm dedicated to continuous learning and staying at the forefront of emerging technologies. I have a keen eye for clean and maintainable code, coupled with a commitment to delivering scalable solutions. I believe in the power of collaboration, and my experiences have taught me the importance of effective communication and adaptability. Explore my portfolio to get a glimpse of my coding journey.
             </p>
         </div>
     </div>
