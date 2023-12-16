@@ -59,13 +59,55 @@ const Experience = () => {
         title: "GitHub",
         style: "shadow-gray-400",
       },
+      {
+        id: 9,
+        src: bootstrap,
+        title: "Bootstrap",
+        style: "shadow-purple-500",
+      },
+      {
+        id: 10,
+        src: python,
+        title: "Python",
+        style: "shadow-yellow-600",
+      },
+      {
+        id: 11,
+        src: flask,
+        title: "Flask",
+        style: "shadow-green-500",
+      },
+      {
+        id: 12,
+        src: django,
+        title: "Django",
+        style: "shadow-green-600",
+      },
+      {
+        id: 13,
+        src: postman,
+        title: "Postman",
+        style: "shadow-orange-400",
+      },
+      {
+        id: 14,
+        src: sqlPostgresql,
+        title: "SQL (PostgreSQL)",
+        style: "shadow-blue-700",
+      },
+      {
+        id: 15,
+        src: nodejs,
+        title: "Node.js",
+        style: "shadow-green-700",
+      },
+    
     ];
 
   return (
     <div
     name="experience"
-    className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
-  >
+    className="bg-gradient-to-b from-gray-800 to-black w-full h-screen" >
     <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
       <div>
         <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
