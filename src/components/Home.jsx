@@ -14,7 +14,7 @@ problems.I thrive as a collaborative team-player, excelling in dynamic environme
 passion from tackling intricate technical challenges.</p>
 
                 <div>
-                    <button className= 'group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
+                    <button className= 'group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-105 duration-300'>
                         Portfolio
                         <span className='group-hover:rotate-90 duration-300'>
                             <HiMiniArrowRight size={20} className='ml-1'/>
