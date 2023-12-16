@@ -101,6 +101,18 @@ const Experience = () => {
         title: "Node.js",
         style: "shadow-green-700",
       },
+      {
+        id: 16,
+        src: pytestImage,
+        title: "Pytest",
+        style: "shadow-red-600",
+      },
+      {
+        id: 17,
+        src: jestImage,
+        title: "Jest",
+        style: "shadow-green-800",
+      },
     
     ];
 
