@@ -9,10 +9,7 @@ const Home = () => {
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center h-full'>
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm a Full Stack Developer</h2>
-                <p className='text-gray-500 py-4 max-w-md'>My expertise encompasses a comprehensive understanding
-of software engineering principles and methodologies, which I adeptly apply to surmount complex
-problems.I thrive as a collaborative team-player, excelling in dynamic environments and derive genuine
-passion from tackling intricate technical challenges.</p>
+                <p className='text-gray-500 py-4 max-w-md text-xl'>Passionate about turning ideas into impactful solutions. Join me in this coding journey where creativity meets functionality and let's build something extraordinary together.</p>
 
                 <div>
                     <Link to="portfolio" smooth duration={500}
