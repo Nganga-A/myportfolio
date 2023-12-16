@@ -12,6 +12,7 @@ function App() {
       <SocialLinks />
       <About />
       <Portfolio />
+      <Experience />
     </div>
   );
 }
