@@ -8,7 +8,11 @@ const About = () => {
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>About</p>
             </div>
             <p className='text-xl mt-10'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse laboriosam nam obcaecati quas perferendis odit officiis rerum quia, nisi hic, commodi rem placeat cum, optio sint dolores molestiae corrupti temporibus velit tenetur? Adipisci perspiciatis nesciunt voluptas nostrum provident. Corrupti cumque fugiat culpa possimus explicabo suscipit eos, minus molestiae eaque!
+            A versatile full-stack software developer with a strong foundation in software development and a passion
+for creating efficient and high-quality solutions.My expertise encompasses a comprehensive understanding
+of software engineering principles and methodologies, which I adeptly apply to surmount complex
+problems.I thrive as a collaborative team-player, excelling in dynamic environments and derive genuine
+passion from tackling intricate technical challenges.
             </p>
             <br/>
             <p className='text-xl'>
