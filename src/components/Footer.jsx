@@ -30,33 +30,32 @@ const FooterPage = () => {
   return (
     <footer className="bg-black font-small pt-4 text-white">
       <div className="container mx-auto text-center md:text-left">
-        <div className="md:flex">
-          <div className="md:w-1/2 mb-4 md:mb-0 flex flex-col justify-center items-center">
-            <h5 className="text-lg font-bold mb-3">Connect with Me</h5>
-            <div className="flex justify-center md:justify-start space-x-4">
-              {socialLinks.map(({ id, icon, href, download }) => (
-                <a
-                  key={id}
-                  href={href}
-                  target="_blank"
-                  download={download}
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-orange-400"
-                >
-                  {icon}
-                </a>
-              ))}
-            </div>
+        <div className="md:flex space-y-4 md:space-y-0">
+          <div className="md:w-1/3 md:mb-0 flex-1 flex flex-col justify-center items-center">
+            <h5 className="text-lg">Connect with Me</h5>
           </div>
-          <div className="md:w-1/2">
-
+          <div className="md:w-1/3 mb-4 md:mb-0 flex-1 flex justify-center items-center space-x-4">
+            {socialLinks.map(({ id, icon, href, download }) => (
               <a
-                href="/public/Abed_Nganga_Resume.pdf"
-                download="Abed_Nganga_Resume.pdf"
-                className="text-white hover:text-orange-400 ml-2"
-              >Download My Resume
+                key={id}
+                href={href}
+                target="_blank"
+                download={download}
+                rel="noopener noreferrer"
+                className="text-white hover:text-orange-400"
+              >
+                {icon}
               </a>
-            
+            ))}
+          </div>
+          <div className="md:w-1/3 mb-4 md:mb-0 flex-1 flex flex-col justify-center items-center">
+            <a
+              href="/public/Abed_Nganga_Resume.pdf"
+              download="Abed_Nganga_Resume.pdf"
+              className="text-white hover:text-orange-400 ml-2"
+            >
+              <h5 className="text-lg"> Download My Resume</h5>
+            </a>
           </div>
         </div>
       </div>
@@ -66,6 +65,8 @@ const FooterPage = () => {
         </div>
       </div>
     </footer>
+
+
   );
 };
 
