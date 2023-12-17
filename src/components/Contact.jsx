@@ -12,7 +12,12 @@ const Contact = () => {
 
     if (isFormValid) {
       try {
-        await emailjs.sendForm('service_f6ihz4c', 'template_02d8dbj', form.current, 'gl3mqg5jg_-1x82LF');
+        await emailjs.sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_PUBLIC_KEY
+        );
 
         // Display success toast and clear the form
         toast.success('Message sent successfully!');
