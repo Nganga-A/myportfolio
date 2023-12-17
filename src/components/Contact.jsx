@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_f6ihz4c', 'template_02d8dbj', form.current, 'gl3mqg5jg_-1x82LF')
+        .then((result) => {
+        console.log(result.text);
+        console.log("Message sent");
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
     <div name="contact" className="w-full h-auto bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-40">
         <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full'>
@@ -9,12 +25,12 @@ const Contact = () => {
                 <p className='py-6'>Submit the form below to get in touch with me</p>
             </div>
             <div className='flex justify-center items-center'>
-                <form action="https://getform.io/f/1d920860-0869-4314-a991-7749ea38589c" method='POST' className='flex flex-col w-full md:w-1/2 '>
-                    <input type="text" name="name" placeholder='Enter your name' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
-                    <input type="text" name="email" placeholder="Enter your email" className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none" />
-                    <textarea className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' name="message" placeholder='Enter your message' rows="10"></textarea>
-                    <button className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Let's talk</button>
-                </form>
+            <form className='flex flex-col w-full md:w-1/2 ' ref={form} onSubmit={sendEmail}>
+                <input type="text" name="name" className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' placeholder='Enter your name'/>
+                <input type="email" name="email" placeholder="Enter your email" className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"  />
+                <textarea className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' name="message" placeholder='Enter your message' rows="10" />
+                <input type="submit" value="Lets talk" className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300' />
+            </form>
             </div>
         </div>
     </div>
