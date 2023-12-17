@@ -13,8 +13,8 @@ const Contact = () => {
     if (isFormValid) {
       try {
         await emailjs.sendForm(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID,
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
           form.current,
           process.env.REACT_APP_PUBLIC_KEY
         );
@@ -38,7 +38,7 @@ const Contact = () => {
 
     setIsFormValid(isValid);
   };
-
+  
   return (
     <div name="contact" className="w-full h-auto bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-40">
       <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full'>
