@@ -1,24 +1,37 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const form = useRef();
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    try {
-      await emailjs.sendForm('service_f6ihz4c', 'template_02d8dbj', form.current, 'gl3mqg5jg_-1x82LF');
-      
-      // Display success toast and clear the form
-      toast.success('Message sent successfully!');
-      form.current.reset();
-    } catch (error) {
-      console.error("Error sending email:", error);
-      toast.error('Error sending email. Please try again.');
+    if (isFormValid) {
+      try {
+        await emailjs.sendForm('service_f6ihz4c', 'template_02d8dbj', form.current, 'gl3mqg5jg_-1x82LF');
+
+        // Display success toast and clear the form
+        toast.success('Message sent successfully!');
+        form.current.reset();
+      } catch (error) {
+        console.error("Error sending email:", error);
+        toast.error('Error sending email. Please try again.');
+      }
+    } else {
+      toast.error('Please fill in all the required fields.');
     }
+  };
+
+  const handleInputChange = () => {
+    // Simple validation check, adjust as needed
+    const inputs = form.current.querySelectorAll('input, textarea');
+    const isValid = Array.from(inputs).every(input => input.value.trim() !== '');
+
+    setIsFormValid(isValid);
   };
 
   return (
@@ -30,10 +43,35 @@ const Contact = () => {
         </div>
         <div className='flex justify-center items-center'>
           <form className='flex flex-col w-full md:w-1/2 ' ref={form} onSubmit={sendEmail}>
-            <input type="text" name="name" className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' placeholder='Enter your name'/>
-            <input type="email" name="email" placeholder="Enter your email" className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"  />
-            <textarea className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' name="message" placeholder='Enter your message' rows="10" />
-            <input type="submit" value="Lets talk" className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300' />
+            <input
+              type="text"
+              name="name"
+              className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
+              placeholder='Enter your name'
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              onChange={handleInputChange}
+              required
+            />
+            <textarea
+              className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
+              name="message"
+              placeholder='Enter your message'
+              rows="10"
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="submit"
+              value="Lets talk"
+              className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
+            />
           </form>
         </div>
       </div>
