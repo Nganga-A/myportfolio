@@ -6,10 +6,12 @@ import SocialLinks from "./components/SocialLinks";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <NavBar />
       <Home />
       <SocialLinks />
