@@ -52,19 +52,19 @@ const NavBar = () => {
       {/* Mobile Navbar */}
       <div
         onClick={() => setNav(!nav)}
-        className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'
+        className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden hover:text-orange-400'
       >
         {nav ? <FaTimes size={38} /> : <FaBars size={30} />}
       </div>
 
       {/* Slide-in Mobile Menu */}
       {nav && (
-        <div className='md:hidden fixed top-0 right-0 h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 p-4 transition-transform duration-300 transform translate-x-0'>
+        <div className='md:hidden fixed top-0 right-0 h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 p-4 transition-transform duration-300 transform translate-x-0 '>
           <ul>
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className='px-4 cursor-pointer capitalize py-2 text-2xl'
+                className='px-4 cursor-pointer capitalize py-2 text-2xl hover:text-orange-400'
               >
                 <Link
                   to={link.toLowerCase()}
