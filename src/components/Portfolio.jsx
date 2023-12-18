@@ -1,36 +1,35 @@
 import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import currency from "../assets/portfolio/currency.png";
+import shortify from "../assets/portfolio/shortify.png";
+import portfolio from "../assets/portfolio/portfolio.png";
+import tastydishes from "../assets/portfolio/tastydishes.png";
+
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: currency,
+      href_demo:'https://currency-converter-nganga-a.vercel.app/',
+      href_code: 'https://github.com/Nganga-A/Currency_Converter'
     },
     {
       id: 2,
-      src: reactParallax,
+      src: tastydishes,
+      href_demo:'https://deluxe-dodol-c29f43.netlify.app/',
+      href_code:'https://github.com/Nganga-A/Tasty_Dishes'
     },
     {
       id: 3,
-      src: navbar,
+      src: shortify,
+      href_demo:'https://url-shortify-gzik.onrender.com',
+      href_code: 'https://github.com/Nganga-A/URL-Shortner'
     },
     {
       id: 4,
-      src: reactSmooth,
-    },
-    {
-      id: 5,
-      src: installNode,
-    },
-    {
-      id: 6,
-      src: reactWeather,
+      src: portfolio,
+      href_demo:'',
+      href_code:'https://github.com/Nganga-A/myportfolio'
     },
   ];
 
@@ -48,7 +47,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src,href_demo,href_code }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -56,12 +55,22 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+              <a
+                  href={href_demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-400"
+                >
                   Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                </a>
+                <a
+                  href={href_code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-400"
+                >
                   Code
-                </button>
+                </a>
               </div>
             </div>
           ))}
