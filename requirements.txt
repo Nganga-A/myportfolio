@@ -16,7 +16,6 @@ charset-normalizer
 click
 colorama
 cryptography
-dbus-python
 decorator
 defer
 defusedxml
