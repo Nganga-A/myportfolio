@@ -17,7 +17,7 @@ const FooterPage = () => {
     {
       id: 3,
       icon: <FaEnvelope size={24} />,
-      href: 'mailto:ngangaabed@example.com',
+      href: 'mailto:ngangaabed@gmail.com',
     },
     {
       id: 4,

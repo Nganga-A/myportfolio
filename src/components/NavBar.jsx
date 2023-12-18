@@ -52,7 +52,7 @@ const NavBar = () => {
       {/* Mobile Navbar */}
       <div
         onClick={() => setNav(!nav)}
-        className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden hover:text-orange-400'
+        className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'
       >
         {nav ? <FaTimes size={38} /> : <FaBars size={30} />}
       </div>
