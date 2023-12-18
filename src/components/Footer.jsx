@@ -22,8 +22,8 @@ const FooterPage = () => {
     {
       id: 4,
       icon: <BsFillPersonLinesFill size={24} />,
-      href: '/public/Abed_Nganga_Resume.pdf',
-      download: true,
+      href: '/Abed_Nganga_Resume.pdf',
+      download: 'Abed_Nganga_Resume.pdf',
     },
   ];
 
@@ -50,7 +50,7 @@ const FooterPage = () => {
           </div>
           <div className="md:w-1/3 mb-4 md:mb-0 flex-1 flex flex-col justify-center items-center">
             <a
-              href="/public/Abed_Nganga_Resume.pdf"
+              href="/Abed_Nganga_Resume.pdf"
               download="Abed_Nganga_Resume.pdf"
               className="text-white hover:text-orange-400 ml-2"
             >

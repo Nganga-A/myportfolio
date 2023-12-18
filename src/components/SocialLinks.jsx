@@ -44,9 +44,9 @@ const SocialLinks = () => {
         Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: '/public/Abed_Nganga_Resume.pdf',
+      href: '/Abed_Nganga_Resume.pdf',
       style: 'rounded-br-md',
-      download: true,
+      download: 'Abed_Nganga_Resume.pdf',
     },
   ];
 
