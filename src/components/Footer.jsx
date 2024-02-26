@@ -22,8 +22,8 @@ const FooterPage = () => {
     {
       id: 4,
       icon: <BsFillPersonLinesFill size={24} />,
-      href: '/Abed_Nganga_Resume.pdf',
-      download: 'Abed_Nganga_Resume.pdf',
+      href: '/Abed_Nganga__Resume.pdf',
+      download: 'Abed_Nganga__Resume.pdf',
     },
   ];
 
