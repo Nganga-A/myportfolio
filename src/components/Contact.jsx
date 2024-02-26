@@ -47,7 +47,7 @@ const Contact = () => {
           <p className='py-6'>Submit the form below to get in touch with me</p>
         </div>
         <div className='flex justify-center items-center'>
-          <form className='flex flex-col w-full md:w-1/2 ' ref={form} onSubmit={sendEmail}>
+          <form className='flex flex-col w-full md:w-1/1 ' ref={form} onSubmit={sendEmail}>
             <input
               type="text"
               name="name"
